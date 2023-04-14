@@ -30,6 +30,6 @@ df = pd.DataFrame(data)
 
 print(df)
 # Save to file
-df.to_excel("filter_inst.xlsx")
+df.to_excel("../intermediateResults/filtered_students.xlsx")
 
 wb.close()
