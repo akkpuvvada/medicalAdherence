@@ -2,7 +2,7 @@ import pandas as pd
 import openpyxl
 from openpyxl.worksheet.filters import DateGroupItem
 
-wb = openpyxl.load_workbook(filename="../intermediateResults/output.xlsx", read_only=True)
+wb = openpyxl.load_workbook(filename="../results2/filter_output1.xlsx", read_only=True)
 ws = wb.active
 # Load the rows
 rows = ws.rows
@@ -29,6 +29,6 @@ df = pd.DataFrame(data)
 
 print(df)
 # Save to file
-df.to_excel("filtered_died.xlsx")
+df.to_excel("../results2/filter_output2.xlsx")
 
 wb.close()

@@ -2,7 +2,7 @@
 import pandas as pd
 import openpyxl
 
-wb = openpyxl.load_workbook(filename="../intermediateResults/filter_medicine_list.xlsx", read_only=True)
+wb = openpyxl.load_workbook(filename="../results2/filter_medicines1.xlsx", read_only=True)
 ws = wb.active
 
 # Load the rows
@@ -24,6 +24,6 @@ for row in rows:
 df = pd.DataFrame(data)
 
 # Save to file
-df.to_excel("../intermediateResults/filter_medicine_2018.xlsx")
+df.to_excel("../results2/filter_medicines2.xlsx")
 
 wb.close()

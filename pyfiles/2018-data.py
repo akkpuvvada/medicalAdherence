@@ -13,12 +13,15 @@ DIABAGY1_col = headers.index('DIABAGY1')
 
 # column at which this diagnosis is mentioned - DIABDXY1_M18
 DIABDXY1_M18_col = headers.index('DIABDXY1_M18')
+DIABDXY2_M18_col = headers.index('DIABDXY2_M18')
 
 data = []
+idx = 0
 for row in rows:
     record = {}
     has_diabetes = False
     diagnosis_legal_age = False
+    print(idx)
     # DIABAGY1 -> 0 - 85 AGE AT DIAGNOSIS
     # DIABDXY1_M18 -> DIABETES DIAGNOSIS 18 filled value = 1
 
@@ -26,13 +29,13 @@ for row in rows:
         for key, cell in zip(headers, row):
           record[key] = cell.value
         data.append(record)
-
+    idx += 1
 
 # Convert to a df
 df = pd.DataFrame(data)
 
 print(df)
 # Save to file
-df.to_excel("output.xlsx")
+df.to_excel("../results2/filter_output1.xlsx")
 
 wb.close()

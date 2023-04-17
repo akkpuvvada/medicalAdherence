@@ -29,6 +29,6 @@ df = pd.DataFrame(data)
 
 print(df)
 # Save to file
-df.to_excel("filter_medicine_list.xlsx")
+df.to_excel("../results2/filter_medicines1.xlsx")
 
 wb.close()
